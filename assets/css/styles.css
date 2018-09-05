@@ -1,0 +1,14 @@
+#container {
+    border: 2px solid black;
+    margin: 0 auto;
+    width: 30%;
+}
+
+.strike {
+    color: gray;
+    text-decoration: gray line-through;
+}
+
+.hidden {
+    display: hidden;
+}
