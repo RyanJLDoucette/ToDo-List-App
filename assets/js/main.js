@@ -18,6 +18,11 @@ $("input[type='text'").on("keypress", function(event){
     if(event.which == 13) {
         var newToDo = $(this).val();//get input
         $(this).val("");//Clear input
-        $("ul").append("<li><span>X </span>" + newToDo + "</li>");
+        $("ul").append("<li><span><i class='fas fa-trash-alt'></i></span> " + newToDo + "</li>");
     }
+});
+
+//hide form when plus is clicked
+$(".fa-plus").on("click", function(){
+    $("input").toggleClass("hidden");
 });
