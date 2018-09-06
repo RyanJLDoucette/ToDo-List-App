@@ -1,7 +1,9 @@
 #container {
     border: 2px solid black;
-    margin: 0 auto;
+    margin: 8% auto;
+    background: #f7f7f7;
     width: 30%;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 .strike {

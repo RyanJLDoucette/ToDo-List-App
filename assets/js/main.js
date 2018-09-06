@@ -1,12 +1,23 @@
 //Check off todos by clicking
-$("li").click(function(){
+$("ul").on("click","li",function(){
     $(this).toggleClass("strike");
 });
 
 //Click on x to delete Todo
-$("span").click(function(event){
+$("ul").on("click", "span", function(event){
     $(this).parent().fadeOut(500,function(){
         $(this).remove();
     });
     event.stopPropagation();
+});
+
+//Add todo
+$("input[type='text'").on("keypress", function(event){
+    /*IF ENTER WAS PRESSED -> CLEAR INPUT AND ADD TODO
+    */
+    if(event.which == 13) {
+        var newToDo = $(this).val();//get input
+        $(this).val("");//Clear input
+        $("ul").append("<li><span>X </span>" + newToDo + "</li>");
+    }
 });
